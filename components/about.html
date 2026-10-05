@@ -3,29 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About Us | Scotty Tennis Club</title>
     <link rel="stylesheet" href="../style.css">
+    
+    <link rel="stylesheet" href="../components_css/about.css">
 </head>
 <body>
-        <header class="site-header">
+    <!-- HEADER (Matching Home Page) -->
+    <header class="site-header">
         <div class="brand">
-            <span style="color: white;font-weight: 1000;font-size: 25px;">Scotty</span>
+            <span>Scotty</span>
         </div>
-        <nav class="nav">
+        
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav class="nav" id="nav-menu">
             <a href="../home.html">Home</a>
-            <a href="/components/about.html">About Us</a>
+            <a href="/components/about.html" class="active">About Us</a>
             <a href="/components/gallery.html">Gallery</a>
             <a href="/components/activities.html">Activities</a>
-            <a href="/components/join.html" style="background: white;color:#606060;padding: 1px 20px;">Join Us</a>
+            <a href="/components/join.html" class="btn-nav-join">Join Us</a>
         </nav>
     </header>
-    <section>
-        <div class="about-div">
-            <h2>Our Club</h2>
-            <p>
-                
-            </p>
+
+    <!-- PAGE HERO BANNER -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>About Scotty Tennis Club</h1>
+            <p>Building a legacy of excellence since 2017</p>
         </div>
     </section>
+
+    <!-- OUR CLUB SECTION -->
+    <section class="split-section">
+        <div class="container split-grid">
+            <div class="text-content">
+                <h2>Our Club</h2>
+                <p>Founded in 2017, Scotty Tennis Club was built on a simple passion: bringing people together through the love of tennis. What started as a small gathering of local tennis enthusiasts has grown into a thriving community for players of all ages and skill levels.</p>
+                <p>At Scotty Tennis Club, we believe tennis is more than just a sport—it’s a way to stay active, build lasting friendships, and challenge yourself. Whether you are picking up a racket for the very first time, looking to join a social league, or wanting to sharpen your competitive edge, our club provides a welcoming and supportive environment.</p>
+                <p>With dedicated coaching, well-maintained courts, and a calendar full of exciting tournaments and social events, we are proud to be your home on the court. Come join the Scotty Tennis family—we can’t wait to see you out there!</p>
+            </div>
+            <div class="image-content">
+                <img src="../gallery/image4.jpeg" alt="Tennis Match at Scotty Club">
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR MISSION SECTION -->
+    <section class="split-section bg-light">
+        <div class="container split-grid reverse-mobile">
+            <div class="image-content">
+                <img src="../gallery/image3.jpeg" alt="Tennis Player Serving">
+            </div>
+            <div class="text-content">
+                <h2>Our Mission</h2>
+                <p>Our mission is to foster a love for tennis while promoting physical fitness, sportsmanship, and community engagement. We strive to create an inclusive environment where players of all backgrounds can come together to learn, compete, and grow both on and off the court.</p>
+                <p>Through our programs, we aim to develop not only skilled athletes but also confident individuals who carry the values of teamwork, perseverance, and respect into every aspect of their lives. At Scotty Tennis Club, we are committed to making a positive impact on our members and the wider community through the power of tennis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE VALUES SECTION (Added Info) -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-title-center">
+                <h2>Why Choose Scotty?</h2>
+                <p>More than just a place to play, we are a place to belong.</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    
+                    <h3>Expert Coaching</h3>
+                    <p>Our professional coaching staff is dedicated to helping you improve your technique, strategy, and overall fitness, no matter your starting level.</p>
+                </div>
+                <div class="value-card">
+                    
+                    <h3>Vibrant Community</h3>
+                    <p>From weekend BBQ mixers to competitive club ladders, our social events make it easy to find playing partners and make lasting friends.</p>
+                </div>
+                <div class="value-card">
+                  
+                    <h3>Top-Tier Facilities</h3>
+                    <p>We boast meticulously maintained hard and clay courts, advanced lighting for night games, and a modern clubhouse for post-match relaxation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION (Added Info) -->
+    <section class="split-section bg-light">
+        <div class="container split-grid">
+            <div class="text-content">
+                <h2>Meet the Coaches</h2>
+                <p>A great club is built by great leadership. Our team of certified professional instructors brings decades of combined experience from collegiate to professional circuits.</p>
+                <p>We pride ourselves on personalized instruction. Whether we are breaking down the mechanics of a serve for a beginner or running high-intensity endurance drills for our advanced tournament players, our coaches are invested in your success.</p>
+            </div>
+            <div class="image-content">
+                <!-- I used image6 here as a placeholder for coaches, you can change it! -->
+                <img src="../gallery/image6.jpeg" alt="Scotty Tennis Coaches">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>Created by H250392P</p>
+    </footer>
+
+    <!-- MOBILE MENU SCRIPT -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

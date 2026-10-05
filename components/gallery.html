@@ -3,21 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>Gallery & Our Courts | Scotty Tennis Club</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components_css/gallery.css">
 </head>
 <body>
+  
     <header class="site-header">
         <div class="brand">
-            <span style="color: white;font-weight: 1000;font-size: 25px;">Scotty</span>
+            <span style="color: white; font-weight: 1000; font-size: 25px;">Scotty</span>
         </div>
-        <nav class="nav">
+        
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+      
+        <nav class="nav" id="nav-menu">
             <a href="../home.html">Home</a>
             <a href="/components/about.html">About Us</a>
-            <a href="/components/gallery.html">Gallery</a>
+            <a href="/components/gallery.html" class="active">Gallery</a>
             <a href="/components/activities.html">Activities</a>
-            <a href="/components/join.html" style="background: white;color:#606060;padding: 1px 20px;">Join Us</a>
+            <a href="/components/join.html" class="btn-nav-join">Join Us</a>
         </nav>
     </header>
+
+    <!-- STAGGERED GALLERY SECTION (Like Image 1) -->
+    <main class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="eyebrow">GALLERY</p>
+                <h1>Memorable Moments</h1>
+            </div>
+            
+            <!-- Trio 1 -->
+            <div class="gallery-trio">
+                <img src="../gallery/image1.jpeg" alt="Tennis Player" class="side-img">
+                <img src="../gallery/image2.jpeg" alt="Tennis Player" class="center-img">
+                <img src="../gallery/image3.jpeg" alt="Tennis Player" class="side-img">
+            </div>
+
+            <!-- Trio 2 -->
+            <div class="gallery-trio">
+                <img src="../gallery/image4.jpeg" alt="Tennis Player" class="side-img">
+                <img src="../gallery/image5.jpeg" alt="Tennis Player" class="center-img">
+                <img src="../gallery/image6.jpeg" alt="Tennis Player" class="side-img">
+            </div>
+
+            <!-- Trio 3 -->
+            <div class="gallery-trio">
+                <img src="../gallery/image7.jpeg" alt="Tennis Player" class="side-img">
+                <img src="../gallery/image8.jpeg" alt="Tennis Player" class="center-img">
+                <img src="../gallery/image9.webp" alt="Tennis Player" class="side-img">
+            </div>
+        </div>
+    </main>
+
+    <!-- MINIMALIST STORYTELLING COURTS SECTION (Like Image 2) -->
+    <section class="court-story-section">
+        <div class="container">
+            
+            <!-- Story Block 1 -->
+            <div class="story-block">
+                <div class="story-text">
+                    <h2>The Sunset Oasis is a tranquil escape</h2>
+                    <p>On the western edge of our grounds lies our tropical-inspired court, an emerald green playing surface framed by rich, terracotta-red out-of-bounds areas. As the sun begins to set, casting a golden, cinematic glow across the net, the world outside fades away.</p>
+                </div>
+                <div class="story-image">
+                    <img src="../gallery/court1.jpeg" alt="Sunset Oasis Court">
+                </div>
+            </div>
+
+            <!-- Story Block 2 (Reversed to keep it interesting) -->
+            <div class="story-block reverse">
+                <div class="story-text">
+                    <h2>Experience the Signature Blue Complex</h2>
+                    <p>Nestled deep within a canopy of mature, towering evergreen trees, these pristine courts mirror the vibrant energy of the US Open. The trees act as a natural windbreak and soundstage, catching the satisfying, echoing thwack of a perfectly timed volley.</p>
+                </div>
+                <div class="story-image">
+                    <img src="../gallery/court3.jpeg" alt="Blue Complex">
+                </div>
+            </div>
+
+            <!-- Story Block 3 -->
+            <div class="story-block">
+                <div class="story-text">
+                    <h2>The true heartbeat of the club</h2>
+                    <p>At the center of our community are our lively, multi-court arenas featuring striking red and green colorways. You will see doubles partners high-fiving at the net, coaches running drills with the next generation of pros, and friends battling it out in friendly weekend leagues.</p>
+                </div>
+                <div class="story-image">
+                    <img src="../gallery/court4.jpeg" alt="Red and Green Central Courts">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="site-footer">
+        <p>Created by H250392P</p>
+    </footer>
+
+      <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

@@ -5,109 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tennis Mini Project</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Added Google Fonts for a cleaner look -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- HEADER -->
     <header class="site-header">
         <div class="brand">
-            <span style="color: white;font-weight: 1000;font-size: 25px;">Scotty</span>
+            <span>Scotty</span>
         </div>
-        <nav class="nav">
+        
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav class="nav" id="nav-menu">
             <a href="home.html">Home</a>
             <a href="/components/about.html">About Us</a>
             <a href="/components/gallery.html">Gallery</a>
             <a href="/components/activities.html">Activities</a>
-            <a href="/components/join.html" style="background: white;color:#606060;padding: 1px 20px;">Join Us</a>
+            <a href="/components/join.html" class="btn-nav-join">Join Us</a>
         </nav>
     </header>
+
+    <!-- HERO SECTION -->
     <section class="hero">
-     <h1 style="font-size:200px;margin-top: 10px;">PLAY STRONG</h1><br>
-    <div class="hero-div">
-        <p>-Scott tennis club formed since 2017</p>
-        <h4>Building Champions On and Off the Court</h4>
-    </div>
+        <h1 class="hero-title">PLAY STRONG</h1>
+        <div class="hero-div">
+            <p>- Scott tennis club formed since 2017</p>
+            <h4>Building Champions On and Off the Court</h4>
+        </div>
     </section>
 
+    <!-- MAIN CONTENT CONTAINER -->
     <div class="container"> 
-     
-    
-    <header class="header"> 
-      <div class="title-column"> 
-        <h1 class="main-title">BUILDING CHAMPIONS ON AND OFF THE COURT</h1> 
-      </div> 
-      <div class="text-column"> 
-        <p style="font-size: medium;">Our tennis academy provides world-class training programs designed for players of 
-all levels. From beginners learning the basics <br><br> to advanced athletes competing in national 
-tournaments, our coaches focus on technique, fitness, and match strategy.</p> 
-      </div> 
-      <div class="cta-column"> 
-        <p style="font-size: medium;">We combine modern training methods, performance analytics, and professional 
-coaching to help every player reach their full potential.</p> <br>
-        <a href="#" class="btn-cta"> 
-          Book a Lesson 
-          <span class="btn-icon">↗</span> 
-        </a> 
-      </div> 
-    </header> 
- 
-   
-    <main class="content-grid"> 
-       
-      <!-- Left Large Banner Card --> 
-      <div class="main-card"> 
-        <img 
-src="/gallery/image2.jpeg" alt="Tennis Player Overhead Shot" class="main-img"> 
-         
-       
-        <div class="overlay-stats"> 
-          <div class="stat-badge"> 
-            <div class="stat-number">500<span class="accent-symbol">+</span></div> 
-            <div class="stat-label">Active Players</div> 
-          </div> 
- 
-          <div class="stat-badge"> 
-            <div class="stat-number">20<span class="accent-symbol">+</span></div> 
-            <div class="stat-label">Professional Coaches</div> 
-          </div> 
- 
-          <a href="#" class="arrow-badge" aria-label="Explore Details"> 
-            ↗ 
-          </a> 
-        </div> 
-      </div> 
- 
-    
-      <div class="right-column"> 
-         
-      
-        <div class="secondary-card"> 
-          <img 
-src="/gallery/image5.jpeg" alt="Male Tennis Player Action" class="secondary-img"> 
-        </div> 
- 
-      
-        <div class="info-card"> 
-          <div class="experience-block"> 
-            <span class="big-number">15</span> 
-            <div class="experience-label"> 
-              <span>Years of</span> 
-              <span>Excellence</span> 
+        <header class="header"> 
+            <div class="title-column"> 
+                <h1 class="main-title">BUILDING CHAMPIONS ON AND OFF THE COURT</h1> 
             </div> 
-          </div> 
+            <div class="text-column"> 
+                <p>Our tennis academy provides world-class training programs designed for players of all levels. From beginners learning the basics <br><br> to advanced athletes competing in national tournaments, our coaches focus on technique, fitness, and match strategy.</p> 
+            </div> 
+            <div class="cta-column"> 
+                <p>We combine modern training methods, performance analytics, and professional coaching to help every player reach their full potential.</p>
+                <a href="#" class="btn-cta"> 
+                    Book a Lesson 
+                    <span class="btn-icon">↗</span> 
+                </a> 
+            </div> 
+        </header> 
  
-          <ul class="feature-list"> 
-            <li>Professional certified coaches</li> 
-            <li>Modern tennis courts</li> 
-            <li>Personalized training programs</li> 
-          </ul> 
-        </div> 
+        <main class="content-grid"> 
+            <!-- Left Large Banner Card --> 
+            <div class="main-card"> 
+                <img src="/gallery/image2.jpeg" alt="Tennis Player Overhead Shot" class="main-img"> 
+                
+                <div class="overlay-stats"> 
+                    <div class="stat-badge"> 
+                        <div class="stat-number">500<span class="accent-symbol">+</span></div> 
+                        <div class="stat-label">Active Players</div> 
+                    </div> 
+                    <div class="stat-badge"> 
+                        <div class="stat-number">20<span class="accent-symbol">+</span></div> 
+                        <div class="stat-label">Professional Coaches</div> 
+                    </div> 
+                    <a href="#" class="arrow-badge" aria-label="Explore Details">↗</a> 
+                </div> 
+            </div> 
  
-      </div> 
- 
-    </main> 
- 
-  </div>
-   <footer style="background: #6fee15 ;padding: 0.2px;">
-    <p style="text-align: center;font-weight: bolder;">Created by H250392P</p>
-   </footer>
+            <!-- Right Column --> 
+            <div class="right-column"> 
+                <div class="secondary-card"> 
+                    <img src="/gallery/image5.jpeg" alt="Male Tennis Player Action" class="secondary-img"> 
+                </div> 
+                
+                <div class="info-card"> 
+                    <div class="experience-block"> 
+                        <span class="big-number">15</span> 
+                        <div class="experience-label"> 
+                            <span>Years of</span> 
+                            <span>Excellence</span> 
+                        </div> 
+                    </div> 
+                    <ul class="feature-list"> 
+                        <li>Professional certified coaches</li> 
+                        <li>Modern tennis courts</li> 
+                        <li>Personalized training programs</li> 
+                    </ul> 
+                </div> 
+            </div> 
+        </main> 
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>Created by H250392P</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

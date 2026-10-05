@@ -1,0 +1,139 @@
+/* --- BASE STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+body {
+    background-color: #ffffff; /* Clean white background like the references */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+   
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.gallery-section {
+    padding: 100px 0;
+    background-color: #fbfbfb; /* Very faint off-white to contrast the pure white storytelling section */
+}
+
+.gallery-trio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px; /* Space between trios */
+}
+
+.gallery-trio img {
+    width: 30%;
+    object-fit: cover;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    transition: transform 0.4s ease;
+}
+
+.gallery-trio img:hover {
+    transform: translateY(-10px);
+}
+
+/* Specific heights to create the layout in Image 1 */
+.gallery-trio .side-img {
+    height: 350px;
+}
+
+.gallery-trio .center-img {
+    height: 550px;
+    width: 35%; /* Make the center one slightly wider too */
+    z-index: 2;
+}
+
+/* --- MINIMALIST STORYTELLING (Image 2 Style) --- */
+.court-story-section {
+    padding: 120px 0;
+    background-color: #ffffff;
+}
+
+.story-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    margin-bottom: 150px; /* Lots of whitespace between stories */
+}
+
+/* Alternates the layout left/right */
+.story-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.story-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.story-text h2 {
+    font-size: 3.5rem; /* Massive, bold heading like the reference */
+    color: #0b1a2a; /* Dark navy color */
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    letter-spacing: -1.5px;
+}
+
+.story-text p {
+    font-size: 1.1rem;
+    color: #64748b; /* Soft slate grey */
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.story-image {
+    flex: 1;
+}
+
+.story-image img {
+    width: 100%;
+    height: 650px; /* Tall portrait crop */
+    object-fit: cover;
+    display: block; /* Removes weird image spacing */
+}
+
+/* --- RESPONSIVE DESIGN (For mobile devices) --- */
+@media (max-width: 992px) {
+    /* Gallery adjustments */
+    .gallery-trio {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .gallery-trio img,
+    .gallery-trio .center-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4/3;
+    }
+
+    /* Storytelling adjustments */
+    .story-block, 
+    .story-block.reverse {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 80px;
+    }
+
+    .story-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .story-image img {
+        height: 400px;
+    }
+}
