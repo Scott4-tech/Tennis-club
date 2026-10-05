@@ -3,21 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join</title>
+    <title>Join Us | Scotty Tennis Club</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-        <header class="site-header">
+    <!-- HEADER -->
+    <header class="site-header">
         <div class="brand">
-            <span style="color: white;font-weight: 1000;font-size: 25px;">Scotty</span>
+            <span style="color: white; font-weight: 1000; font-size: 25px;">Scotty</span>
         </div>
-        <nav class="nav">
-            <a href="../index.html">Home</a>
+        
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav class="nav" id="nav-menu">
+            <a href="../home.html">Home</a>
             <a href="/components/about.html">About Us</a>
             <a href="/components/gallery.html">Gallery</a>
             <a href="/components/activities.html">Activities</a>
-            <a href="/components/join.html" style="background: white;color:#606060;padding: 1px 20px;">Join Us</a>
+            <a href="/components/join.html" class="btn-nav-join active">Join Us</a>
         </nav>
     </header>
+
+    <!-- JOIN FORM SECTION -->
+    <section class="join-section">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Become a Member</h2>
+                <p>Join the Scotty Tennis family today. Fill out the form below and our team will get in touch with your membership details.</p>
+            </div>
+
+            <!-- Action points to the secure PHP script -->
+            <form action="process.php" method="POST" class="join-form">
+                
+                <div class="input-group">
+                    <label for="full_name">Full Name</label>
+                    <input type="text" id="full_name" name="full_name" placeholder="John Doe" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+123 456 7890" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="skill_level">Your Skill Level</label>
+                    <select id="skill_level" name="skill_level" required>
+                        <option value="" disabled selected>Select your level</option>
+                        <option value="Beginner">Beginner (Never played / Learning)</option>
+                        <option value="Intermediate">Intermediate (Casual / Club level)</option>
+                        <option value="Advanced">Advanced (Tournament / Competitive)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>Created by H250392P</p>
+    </footer>
+
+    <!-- MOBILE MENU SCRIPT -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
